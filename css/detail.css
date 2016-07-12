@@ -1,0 +1,384 @@
+body{
+    font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #eff3f5;
+    -webkit-font-smoothing: antialiased;
+}
+
+body, div, dl, dt, dd, ul, ol, 
+li, h1, h2, h3, h4, h5, h6, pre, 
+code, form, fieldset, legend, input,
+ textarea, p, blockquote, th, td{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    outline: 0;
+    text-decoration: none;
+}
+
+
+#head-box{
+    position: relative;
+    height: 48px;
+}
+
+#head-box .banner-bg{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center 0;
+    background: url(../image/banner.jpg) no-repeat;
+}
+
+#head-box #header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 48px;
+    width: 100%;
+    z-index: 9999;
+    background-color: #fff;
+}
+
+
+#header .wrapper{
+    position: relative;
+    height: 100%;
+    width: 1500px;
+    border: 0;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1275px){
+    #header .wrapper{
+        width: 996px;    
+    }
+}
+
+@media screen and (max-width: 1528px) and (min-width: 1276px){
+    #header .wrapper{
+        width: 1248px;    
+    }
+}
+
+@media screen and (min-width:1529px){
+    #header .wrapper{
+        width: 1500px;    
+    }
+}
+
+#header .menu-bar{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.menu-bar .leftpart{
+    position: relative;
+    float: left;
+    top: 13px;
+}
+
+.leftpart .header-item{
+    position: relative;
+    margin-right: 25px;
+    cursor: pointer;
+    color: #000;
+    font-size: 18px;
+}
+
+.leftpart .header-item:hover{
+    color: #3498db;
+}
+
+.menu-bar .rightpart{
+    position: relative;
+    float: right;
+    top: 6px;
+    font-size: 16px;
+}
+
+.rightpart .header-item{
+    display: inline-block;
+    position: relative;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #3498db;
+    /*border: 1px solid #D9D9D9;*/
+}
+
+
+.rightpart .login{
+    width: 52px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.rightpart form{
+    position: relative;
+    display: inline-block;
+}
+
+.rightpart .search{
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 144px;
+    height: 34px;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+    color: #fff;
+    color: #000;
+    font-size: 16px;
+    font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.search .search-logo{
+    position: absolute;
+    display: block;
+    top: 5px;
+    right: 3px;
+    width: 26px;
+    height: 26px;
+    background: url(../image/search.png)  no-repeat;
+    cursor: pointer;
+
+}
+
+#main-box{
+    position: relative;
+    margin: 30px auto;
+    /*width: 1180px;*/
+    width: 940px;
+    background-color: #fff;
+}
+
+#main-box .main-top{
+    position: relative;
+    padding: 20px;
+}
+
+.main-top .title{
+    display: block;
+    max-width: 640px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 20px;
+    color: #2c3e50;
+    font-weight: bold;
+    height: 30px;
+}
+
+.mes{
+    display: block;
+    margin-top: 10px;
+}
+
+.mes span{
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.mes i{
+    cursor: pointer;
+}
+
+.mes .icon-pv{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../image/pv.png);
+}
+
+.mes .mes-font{
+    position: relative;
+    top: -4px;
+    font-size: 14px;
+    color: #9aabb8;
+    font-style: normal;
+}
+
+.mes .icon-tag{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../image/tag.png);
+}
+
+.mes .icon-good{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../image/good.png);
+}
+
+.mes .icon-comment{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../image/comment.png);
+}
+
+.mes .offset{
+    margin-left: 35px;
+}
+
+.mes .icon-time{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../image/time.png);
+}
+
+#main-box .container{
+    padding: 30px 20px 5px 20px;
+    border-top: 1px solid #eff3f5;
+    border-bottom: 1px solid #eff3f5;
+}
+
+.container img{
+    display: block;
+    padding: 0;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+.description{
+    position: relative;
+    padding: 20px 0;
+}
+
+.description .author{
+    padding: 0 20px;
+    position: relative;
+    /*width: 300px;*/
+    background-color: #f6f9fa;
+    height: 150px;
+    top: 0;
+    left: 0;
+    /*border-radius: 10px;
+    border: 2px solid #000;*/
+}
+
+.author img{
+    position: relative;
+    top: 50px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.author .name{
+    display: inline-block;
+    position: absolute;
+    top: 50px;
+    left: 90px;
+    font-size: 20px;
+    color: #2c3e50;
+    font-weight: bold;
+    height: 30px;
+}
+
+.author .summary{
+    display: inline-block;
+    position: absolute;
+    color:#2c4e50;
+    left: 90px;
+    top: 80px;
+}
+
+.comment-list{
+    list-style: none;
+}
+
+.comment-list .item{
+    position: relative;
+    min-height: 90px;
+    padding: 20px 50px ;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.item .peo-pic{
+    display: inline-block;
+    float: left;
+}
+
+.item .peo-pic img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.item .comment-data{
+    float: left;
+    margin-left: 20px;
+    width: 700px;
+    height: 90px;
+}
+.item .peo-name{
+    display: inline-block;
+    color: #95a5a6;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.item .peo-time{
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    font-size: 12px;
+    color: #bdbdbd;
+}
+
+.item .peo-content{
+    position: relative;
+    top: 10px;
+}
+
+.user-do{
+    position: relative;
+    border-top: 1px solid #eff3f5;
+    padding:20px 50px;
+}
+
+.user-do img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.user-do textarea{
+    position: relative;
+    resize: none;
+    top: 10px;
+    left: 30px;
+    width: 600px;
+    height: 70px;
+    font-family: "Microsoft Yahei";
+}
+
+.user-do .submit-comment{
+    position: relative;
+    top: -20px;
+    left: 50px;
+    display: inline-block;
+    width:80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #3498DB;
+    color: #fff;
+    border-radius: 10px;
+}

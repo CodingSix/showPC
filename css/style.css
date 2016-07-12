@@ -1,5 +1,4 @@
 body{
-    min-width: 996px; 
     font-family: "helvetica neue",arial,sans-serif;
 }
 
@@ -19,6 +18,7 @@ a{
 
 #head-box{
     position: relative;
+    height: 48px;    
 }
 
 #head-box .banner-bg{
@@ -37,7 +37,6 @@ a{
     height: 48px;
     width: 100%;
     z-index: 9999;
-    /*background: url(../image/head_top_mask.png) center repeat-x;     */
 }
 
 #head-box .addstyle{

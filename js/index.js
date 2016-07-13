@@ -11,6 +11,10 @@ $(function(){
         
         
         if(osTop>200){
+            $(".top-form").css({
+                display:"inline-block"
+            })
+
             $("#header").css({
                backgroundColor:"#fff",
             });
@@ -27,6 +31,9 @@ $(function(){
             
         }
         else{
+            $(".top-form").css({
+                display:"none"
+            })
             $("#header").removeClass("addstyle");
             $(".header-item").css({
                 color:"#fff"

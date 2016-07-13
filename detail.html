@@ -3,7 +3,13 @@
     <head>
         <title>单页面</title>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/icon.css" rel="stylesheet" >    
         <link href="css/detail.css" rel="stylesheet">
+        <script src="js/jquery.js"></script>
+        <script src="js/detail.js"></script>
+
     </head>
     <body>
         <div id="head-box">
@@ -63,6 +69,26 @@
                         <em class="mes-font">12</em>
                     </span>
                 </div>
+                <div class="icon-font">
+                    <div class="icon-bg">
+                        <div class="icon-box">
+                            <i class="fa fa-heart fa-2x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="share">
+                        <ul class="share-list">
+                            <li>
+                                <i class="fa fa-weixin fa-2x" aria-hidden="true" style="position:relative;left:-2px;"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-weibo fa-2x" aria-hidden="true"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-qq fa-2x" aria-hidden="true"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="description">
                 <div class="author">
@@ -97,6 +123,12 @@
                 <img src="image/user1.jpg" alt="用户图片">
                 <textarea></textarea>
                 <a href="#" class="submit-comment">提交评论</a>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="copyright">
+                <p>华南理工大学广州学院行政楼801</p>
+                <p>©星空学生创新中心</p>     
             </div>
         </div>
     </body>

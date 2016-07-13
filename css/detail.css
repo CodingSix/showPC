@@ -2,6 +2,7 @@ body{
     font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #eff3f5;
     -webkit-font-smoothing: antialiased;
+    min-width: 996px;
 }
 
 body, div, dl, dt, dd, ul, ol, 
@@ -131,7 +132,6 @@ a{
     border-radius: 2px;
     color: #fff;
     color: #000;
-    font-size: 16px;
     font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
@@ -234,6 +234,87 @@ a{
     height: 20px;
     background: url(../image/time.png);
 }
+
+.container .icon-font{
+    position: relative;
+    margin: 30px 0;
+}
+
+.icon-font .icon-bg{
+    position: relative;
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border: 1px solid #9aabb8;
+    border-radius: 70px;
+    cursor: pointer;
+    color: #9aabb8;
+}
+
+.icon-bg .icon-box{
+    position: absolute;
+    left: 50%;
+    margin: -13px 0 0 -16px;
+    top: 50%;
+}
+
+.icon-bg:hover{
+    color: #ec6f6f;
+    border: 1px solid #ec6f6f;
+}
+
+.share{
+    position: absolute;
+    right: 0;
+    top: 16px;;
+}
+
+.share-list{
+    list-style: none;
+}
+
+.share-list li{
+    float: left;
+    margin-left: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #a8b4bf;
+    color:#a8b4bf;
+}
+
+.share-list li i{
+    padding: 10px; 
+    font-size: 26px;
+}
+
+.share-list .wx-style{
+    position: relative;
+    left: -2px;
+}
+
+.share-list li:hover{
+    cursor: pointer;
+    color: #fff;
+    transition:background 0.3s;
+}
+
+.share-list li:nth-child(1):hover{
+    background-color: #61BA2A;
+    border: 1px solid #61BA2A;
+}
+
+.share-list li:nth-child(2):hover{
+    background-color: #E6162D;
+    border: 1px solid #E6162D;
+}
+
+.share-list li:nth-child(3):hover{
+    background-color: #0990CA;
+    border: 1px solid #0990CA;
+}
+
 
 #main-box .container{
     padding: 30px 20px 5px 20px;
@@ -381,4 +462,20 @@ a{
     background-color: #3498DB;
     color: #fff;
     border-radius: 10px;
+}
+
+#footer{
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: #fff;
+}
+
+#footer .copyright{
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    text-align: center;
+    bottom: 5px;
 }

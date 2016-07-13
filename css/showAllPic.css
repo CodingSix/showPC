@@ -1,0 +1,135 @@
+@font-face {font-family: 'iconfont';
+    src: url('../font/iconfont.eot'); /* IE9*/
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'), 
+    url('../font/iconfont.ttf') format('truetype'), 
+    url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li,ul{
+    list-style: none;
+}
+
+.headerTemp{
+    height: 50px;
+    width:100%;
+}
+
+.header{
+    height: 70px;
+    /* height: 50px; */
+    width:100%;
+    background-color: #ffffff; 
+    /* box-shadow: 0px 2px 15px 3px #c3c3c3; */
+    position: fixed;
+    top: 0px;
+}
+
+.header .logo{
+    background: url(../image/xingkongLogo.png) center no-repeat;
+    background-size: contain;
+    margin-left: 10%;
+    width: 99.68px;
+    height: 70px;
+    /*
+    width: 72.1px;
+    height: 50px;
+    */
+}
+
+.header div,.header ul,.header li{
+    display: block;
+    float: left;
+    height: 100%;
+    color: #7d7b7b;
+    line-height: 70px;
+    
+}
+
+.header .headTag a{
+    display: block;
+    height: 100%;
+    float: left;
+    font-size: 20px;
+}
+
+.header .headTag a:hover li{
+    color: #000000;
+}
+
+.header ul{
+    width: 500px;
+    margin: 0px;
+}
+
+.header .headTag li{
+    text-align: center;
+    margin: 0 30px;
+}
+
+.body{
+    background-color: #f5f5f5;
+    width: 100%;
+    padding-top: 50px
+}
+
+.sort{
+    width:1024px;
+    height:80px;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 20px;
+    /*border-bottom: 1px solid #030303;*/
+}
+
+.sort .tag{
+    width: 80px;
+    height: 50px;
+    float: left;
+    margin-left: 20px;
+    color: #000000;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    /* transition: background-color ease-out .3s; */
+}
+
+.sort .tag:hover{
+    background-color: #2fa8ff;
+    color: #ffffff;
+}
+
+.sort .tagAll{
+    margin-left: 60px;
+}
+
+.content{
+    /*background-color: blueviolet;*/
+    width: 1024px;
+    height: 900px;
+    margin:0 auto;
+}
+

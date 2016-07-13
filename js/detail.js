@@ -1,4 +1,6 @@
 $(function(){
+
+    // 判断是否点赞
     var flag=null;
     $(".icon-bg").click(function(){
         console.log(flag);

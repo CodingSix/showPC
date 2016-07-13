@@ -4,9 +4,13 @@
         <title>展示</title>
         <meta charset="UTF-8">
         <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/picContainer.css">
         <script src="js/jquery.js"></script>
         <!--<script src="js/jquery.color.js"></script>-->
         <script src="js/index.js"></script>
+        <script src="js/appendPicHTML.js"></script>
+        <script src="js/imgLoader.js"></script>
+        <script src="js/animation.js"></script>
     </head>
     <body>
         <div id="head-box">
@@ -33,6 +37,38 @@
                 </form>
             </div>
         </div>
-        <img src="image/demo.jpg" alt="demo图像" style="margin-top:800px;width:100%">
+        <!-- <img src="image/demo.jpg" alt="demo图像" style="margin-top:800px;width:100%"> -->
+        <div class="content">
+            
+        </div>
     </body>
+    <script type="text/javascript">
+        var imgLoader = window.imgLoader;
+        var animationer= window.animationer;
+        var picContainer = $('.content');
+        var picHtml = null;
+        $.ajax({
+            type: "POST",
+            url: "api/json.php",
+            datatype: "json",
+            success: function(data){
+                var picData = JSON.parse(data);
+                var tempArr = null;
+                var picURLS = [];
+                console.log(picData)
+                tempArr = appendPicHTML(picData);
+                //插入图片的HTML文档
+                picURLS = tempArr.picArr;
+                picHtml = tempArr.picHtml;
+                picContainer.append(picHtml);
+                console.log(picURLS)
+                setTimeout(function(){
+                    imgLoader.load('.picLoader',picURLS,null);
+                },500);
+            },
+            error: function(e){
+
+            }
+        });
+    </script>
 </html>

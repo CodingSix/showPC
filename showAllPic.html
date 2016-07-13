@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/showAllPic.css">
+    <link rel="stylesheet" href="css/picContainer.css">
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/imgLoader.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/appendPicHTML.js"></script>
+</head>
+<body>
+<div class="headerTemp"></div>  
+<div class="header">
+    <div class="logo"></div>
+    <ul class="headTag">
+        <a href=""><li>摄影作品</li></a>
+        <a href=""><li>平面作品</li></a>
+        <a href=""><li>影视作品</li></a>
+    </ul>
+    <div class="search" id="search"></div>
+</div>
+
+<div class="body">
+    <div class="sort">
+        <div class="tag tagAll">全部</div>
+        <div class="tag tagNew">最新</div>
+        <div class="tag tagHot">最热</div>
+    </div>
+    <div class="content" id="content">
+        <!--
+        <div class="outCon">
+            <div class="picCon">
+                <img src="" alt="" >
+                <div class="title">标题标题标题标题标题</div>
+                <div class="detailCon">
+                    <div class="view">浏览量</div>
+                    <div class="hot">热度</div>
+                </div>
+                <div class="author">作者</div>
+            </div>
+        </div>
+        -->
+
+
+    </div>
+</div>
+<div class="footer">
+</div>
+</body>
+<script>
+    /*
+     <div class="outCon">
+     <div class="picCon">
+     <img src="" alt="" >
+     <div class="title">标题标题标题标题标题</div>
+     <div class="detailCon">
+     <div class="view">浏览量</div>
+     <div class="hot">热度</div>
+     </div>
+     <div class="author">作者</div>
+     </div>
+     </div>
+     */
+
+    /*var datas = {
+        "Status": 200,
+        "Message": null,
+        "data": [
+            {
+                "pic": "img/prefect.jpeg",
+                "title": "MyTitle1",
+                "pv": 1000,
+                "like": 100,
+                "author": "MR.Wang",
+                "link": '...'
+            },
+            {
+                "pic": "img/2.jpeg",
+                "title": "MyTitle2",
+                "pv": 1111,
+                "like": 111,
+                "author": "MR.Lang",
+                "link": '...'
+            }
+        ]
+    };
+*/
+    var picContainer = $('#content');
+    var imgLoader = window.imgLoader;
+    var animationer= window.animationer;
+    var picHtml = null;
+    $.ajax({
+        type: "POST",
+        url: "api/json.php",
+        datatype: "json",
+        success: function(data){
+            var picData = JSON.parse(data);
+            var tempArr = null;
+            var picURLS = [];
+            console.log(picData)
+            tempArr = appendPicHTML(picData);
+            //插入图片的HTML文档
+            picURLS = tempArr.picArr;
+            picHtml = tempArr.picHtml;
+            picContainer.append(picHtml);
+            console.log(picURLS)
+            setTimeout(function(){
+                imgLoader.load('.picLoader',picURLS,null);
+            },500);
+        },
+        error: function(e){
+
+        }
+    })
+
+
+    
+/*
+
+    var img = new Image();
+    img.src = 'img/prefect.jpeg';
+    img.onload = function () {
+        $('.picLoader').eq(0).append(img);
+    }
+
+*/
+    
+    
+
+    //console.log(imgLoader.load);
+    //var imgList = ['img/prefect.jpeg', 'img/2.jpeg', 'img/3.jpeg', 'img/4.jpg'];
+
+
+    //imgLoader.load('.picLoader', 'img/prefect.jpeg',null);
+
+    
+
+
+
+</script>
+</html>
